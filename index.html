@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EstudeProIF — Materiais de Português para o IF</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom gradient background helpers */
+        .hero-gradient {
+            background-image: linear-gradient(90deg, #1e90ff 0%, #4f46e5 50%, #06b6d4 100%);
+        }
+
+        .card-gradient {
+            background-image: linear-gradient(135deg, #0ea5e910, #7c3aed50);
+        }
+
+        /* Smooth entrance animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 600ms cubic-bezier(.2, .9, .3, 1);
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* Simple carousel styles */
+        .carousel-track {
+            display: flex;
+            gap: 1rem;
+            transition: transform 450ms ease;
+        }
+
+        /* small visual polish */
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(6px);
+        }
+    </style>
+</head>
+
+<body class="antialiased text-gray-100 bg-gradient-to-b from-sky-50 to-white">
+
+    <!-- NAV -->
+    <nav class="max-w-6xl mx-auto p-5 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-md hero-gradient flex items-center justify-center text-white font-bold p-1">
+                <img src="images/logo.svg" alt="Logomarca"></div>
+            <span class="text-sky-800 font-extrabold text-lg">EstudeProIF</span>
+        </a>
+        <div class="hidden md:flex gap-6 items-center text-sky-800">
+            <a href="#sobre" class="hover:underline">Sobre</a>
+            <a href="#materiais" class="hover:underline">Materiais</a>
+            <a href="#precos" class="hover:underline">Preços</a>
+            <a href="#contato" class="hover:underline">Contato</a>
+        </div>
+        <a id="whatsappTop"
+            href="https://wa.me/SEUNUMEROCOMCODIGO?text=Ol%C3%A1%2C+quero+comprar+os+materiais+do+Estude+Pro+IF"
+            class="ml-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500 text-white hover:brightness-95 shadow-lg">Adiquirir Agora - WhatsApp</a>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-gradient text-white py-16">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-6">
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Sonhando em se tornar um <span
+                        class="text-yellow-300">estudante</span> do <span class="text-yellow-300">Instituto
+                        Federal</span> na sua cidade?</h1>
+                <p class="text-sky-100 text-lg max-w-xl">
+                    Muito provavelmente você faz parte do grande grupo de estudantes que querem conquistar uma vaga no
+                    IF, mas ainda não sabem por onde começar ou como organizar os estudos.
+                    Pensando nisso, criamos materiais completos de Língua Portuguesa — com teoria direta, exercícios
+                    comentados e planos de estudo — para te guiar passo a passo até a aprovação.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 mt-4">
+                    <a href="#precos"
+                        class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white text-sky-700 font-semibold shadow hover:scale-105 transition">Quero
+                        os materiais</a>
+                    <a href="#como-funciona"
+                        class="inline-flex items-center justify-center px-6 py-3 rounded-full border border-white/30 text-white/90 hover:bg-white/10 transition">Como
+                        funciona</a>
+                </div>
+
+                <ul class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sky-50">
+                    <li class="flex items-center gap-3"><span class="px-3 py-1 rounded-full bg-white/20">✓</span> Teoria
+                        direta ao ponto</li>
+                    <li class="flex items-center gap-3"><span class="px-3 py-1 rounded-full bg-white/20">✓</span>
+                        Exercícios comentados</li>
+                    <li class="flex items-center gap-3"><span class="px-3 py-1 rounded-full bg-white/20">✓</span> Plano
+                        de estudos pronto</li>
+                </ul>
+            </div>
+
+            <div class="relative">
+                <!-- Main hero image (replace src) -->
+                <img src="images/herosection.svg" alt="Estudante sorrindo com mochila - imagem jovem estudante"
+                    class="mx-auto w-full max-w-md rounded-xl shadow-2xl border-4 border-white/10">
+                <!-- Decorative circles -->
+                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- BENEFÍCIOS -->
+    <section id="sobre" class="max-w-6xl mx-auto px-6 py-14">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold text-sky-900">Por que nosso material funciona?</h2>
+                <p class="text-gray-700">Criado por professora de Língua Portuguesa com foco no estilo de prova dos
+                    Institutos Federais. Nosso método une teoria prática, leitura orientada e exercícios comentados —
+                    para você saber exatamente por onde começar.</p>
+
+                <ol class="mt-4 space-y-3 list-decimal list-inside text-gray-700">
+                    <li><strong>Direcionamento inicial:</strong> plano de estudos passo a passo.</li>
+                    <li><strong>Interpretação por meio da leitura:</strong> textos selecionados com técnicas de análise.
+                    </li>
+                    <li><strong>Treino aplicado:</strong> exercícios e simulados estilo IF.</li>
+                </ol>
+
+                <a href="#materiais"
+                    class="inline-block mt-4 px-5 py-3 rounded-lg bg-sky-700 text-white font-semibold">Ver materiais</a>
+            </div>
+
+            <div class="space-y-4">
+                <div class="p-6 rounded-xl glass">
+                    <h3 class="font-semibold text-sky-800">O que você recebe</h3>
+                    <ul class="mt-3 text-gray-700">
+                        <li>• E-book Gramática prática (50 pág)</li>
+                        <li>• E-book Interpretação & leitura</li>
+                        <li>• Plano de estudos de 30 dias</li>
+                        <li>• Exercícios comentados e simulados</li>
+                    </ul>
+                </div>
+
+                <div class="p-6 rounded-xl glass">
+                    <h3 class="font-semibold text-sky-800">Formato</h3>
+                    <p class="mt-2 text-gray-700">Arquivos em PDF individuais para download + link do combo. Entrega via
+                        WhatsApp (resposta automática com link).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section id="como-funciona" class="bg-sky-50 py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <h3 class="text-2xl font-bold text-sky-800">Como funciona (3 passos)</h3>
+            <div class="mt-6 grid md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-xl bg-white shadow">
+                    <h4 class="font-semibold text-[#1e90ff]">1. Escolha</h4>
+                    <p class="mt-2 text-gray-600">Escolha e-book individual ou o combo completo.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-white shadow">
+                    <h4 class="font-semibold text-[#1e90ff]">2. Compre pelo WhatsApp</h4>
+                    <p class="mt-2 text-gray-600">Você abre o chat, envia a confirmação e recebe os links em PDF
+                        automaticamente.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-white shadow">
+                    <h4 class="font-semibold text-[#1e90ff]">3. Estude com método</h4>
+                    <p class="mt-2 text-gray-600">Siga o plano de estudos e faça os exercícios. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MATERIAIS / CARROSSEL -->
+    <section id="materiais" class="max-w-6xl mx-auto px-6 py-14">
+        <h3 class="text-2xl font-bold text-sky-800">Materiais disponíveis</h3>
+        <p class="text-gray-600 mt-2">Compre individualmente (R$50) ou leve o combo (R$100).</p>
+
+        <div class="mt-8 relative">
+            <!-- carousel controls -->
+            <button id="prev"
+                class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 text-sky-800 p-2 rounded-full shadow">◀</button>
+            <button id="next"
+                class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 text-sky-800 p-2 rounded-full shadow">▶</button>
+
+            <div class="overflow-hidden">
+                <div id="carousel" class="carousel-track">
+                    <!-- Card 1 -->
+                    <article class="min-w-[280px] max-w-sm bg-white rounded-xl p-6 shadow">
+                        <img src="images/books.svg"
+                            alt="Capa do e-book Gramática prática - estudo de gramática para IF"
+                            class="rounded-md w-full">
+                        <h4 class="mt-4 font-bold text-sky-800">Gramática prática</h4>
+                        <p class="mt-2 text-gray-600 text-sm">Teoria objetiva e exercícios comentados.</p>
+                        <div class="mt-4 flex gap-2">
+                            <a href="https://wa.me/SEUNUMEROCOMCODIGO?text=Quero+comprar+Gram%C3%A1tica+pr%C3%A1tica"
+                                class="flex-1 inline-flex items-center justify-center px-3 py-2 rounded-md bg-sky-600 text-white">R$50
+                                - Comprar</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="min-w-[280px] max-w-sm bg-white rounded-xl p-6 shadow">
+                        <img src="images/books.svg"
+                            alt="Capa do e-book Interpretação e leitura - textos comentados" class="rounded-md w-full">
+                        <h4 class="mt-4 font-bold text-sky-800">Interpretação & Leitura</h4>
+                        <p class="mt-2 text-gray-600 text-sm">Textos selecionados e técnicas de análise.</p>
+                        <div class="mt-4 flex gap-2">
+                            <a href="https://wa.me/SEUNUMEROCOMCODIGO?text=Quero+comprar+Interpreta%C3%A7%C3%A3o+%26+Leitura"
+                                class="flex-1 inline-flex items-center justify-center px-3 py-2 rounded-md bg-sky-600 text-white">R$50
+                                - Comprar</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="min-w-[280px] max-w-sm bg-white rounded-xl p-6 shadow">
+                        <img src="images/books.svg"
+                            alt="Capa do Plano de Estudos 30 dias" class="rounded-md w-full">
+                        <h4 class="mt-4 font-bold text-sky-800">Plano de Estudos (30 dias)</h4>
+                        <p class="mt-2 text-gray-600 text-sm">Roteiro diário para organização dos estudos.</p>
+                        <div class="mt-4 flex gap-2">
+                            <a href="https://wa.me/SEUNUMEROCOMCODIGO?text=Quero+comprar+Plano+de+Estudos"
+                                class="flex-1 inline-flex items-center justify-center px-3 py-2 rounded-md bg-sky-600 text-white">R$50
+                                - Comprar</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 - combo -->
+                    <article class="min-w-[280px] max-w-sm bg-white rounded-xl p-6 shadow">
+                        <img src="images/books.svg"
+                            alt="Capa do combo completo dos e-books - pacote Estude Pro IF" class="rounded-md w-full">
+                        <h4 class="mt-4 font-bold text-sky-800">Combo completo</h4>
+                        <p class="mt-2 text-gray-600 text-sm">Todos os materiais juntos: economia e suporte.</p>
+                        <div class="mt-4 flex gap-2">
+                            <a href="https://wa.me/SEUNUMEROCOMCODIGO?text=Quero+comprar+o+Combo+Completo"
+                                class="flex-1 inline-flex items-center justify-center px-3 py-2 rounded-md bg-amber-400 text-sky-900 font-semibold">R$100
+                                - Comprar</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREÇOS / CTA -->
+    <section id="precos" class="bg-white py-14">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold text-sky-800">Ofertas</h3>
+            <p class="mt-2 text-gray-600">Individual R$50 • Combo com todos R$100</p>
+
+            <div class="mt-8 grid md:grid-cols-2 gap-6">
+                <div class="p-6 rounded-xl shadow">
+                    <h4 class="font-bold text-sky-800">E-book individual</h4>
+                    <p class="mt-2 text-gray-700">Conteúdo completo para focar em gramática ou interpretação.</p>
+                    <div class="mt-4">
+                        <a href="https://wa.me/SEUNUMEROCOMCODIGO?text=Quero+comprar+um+e-book+individual"
+                            class="inline-block px-5 py-3 rounded-lg bg-sky-700 text-white font-semibold">R$50 - Comprar
+                            via WhatsApp</a>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-xl shadow border-2 border-amber-300">
+                    <h4 class="font-bold text-sky-800">Combo completo</h4>
+                    <p class="mt-2 text-gray-700">Todos os e-books + plano de estudos + suporte por WhatsApp.</p>
+                    <div class="mt-4">
+                        <a href="https://wa.me/SEUNUMEROCOMCODIGO?text=Quero+comprar+o+combo+completo"
+                            class="inline-block px-5 py-3 rounded-lg bg-amber-400 text-sky-900 font-semibold">R$100 -
+                            Comprar via WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="mt-6 text-sm text-gray-500">Após a confirmação você receberá automaticamente o(s) links para
+                download no WhatsApp.</p>
+        </div>
+    </section>
+
+    <!-- SOBRE A PROFESSORA -->
+    <section id="professora" class="max-w-6xl mx-auto px-6 py-14">
+        <div class="grid md:grid-cols-3 gap-6 items-center">
+            <img src="images/teacher.png"
+                alt="Foto da professora de Língua Portuguesa - autoridade do curso"
+                class="rounded-xl no-shadow-md md:col-span-1">
+            <div class="md:col-span-2">
+                <h3 class="text-2xl font-bold text-sky-800">Sobre a professora</h3>
+                <p class="mt-2 text-gray-700">Material criado por professora especialista em Língua Portuguesa com
+                    experiência em preparação para vestibulares e concursos dentro dos Institutos Federais. Conteúdo
+                    claro, objetivo e com foco no que realmente cai na prova. Possui:</p>
+
+                <ul class="mt-4 text-gray-700">
+                    <li>• Experiência em sala e online</li>
+                    <li>• Aulas e materiais focados em provas do IF</li>
+                    <li>• Exercícios comentados e plano de estudos</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="bg-sky-50 py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <h3 class="text-2xl font-bold text-sky-800">Dúvidas frequentes</h3>
+            <div class="mt-6 grid md:grid-cols-2 gap-6">
+                <details class="p-4 bg-white rounded-lg shadow">
+                    <summary class="font-semibold text-[#1e90ff]">Como recebo os materiais?</summary>
+                    <p class="mt-2 text-gray-600">Após o pagamento (confirmação via WhatsApp) você recebe links em PDF
+                        diretamente no chat. Também enviaremos instruções de estudo.</p>
+                </details>
+                <details class="p-4 bg-white rounded-lg shadow">
+                    <summary class="font-semibold text-[#1e90ff]">Há suporte para dúvidas?</summary>
+                    <p class="mt-2 text-gray-600">Sim — suporte via WhatsApp para dúvidas sobre os materiais (limite de
+                        mensagens incluso).</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer id="contato" class="bg-sky-900 text-sky-100 py-8">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+            <div>
+                <h4 class="font-bold">EstudeProIF</h4>
+                <p class="text-sm text-sky-200 mt-2">Materiais para ajudar você a passar no IF — interpretação,
+                    gramática e plano de estudos.</p>
+            </div>
+            <div>
+                <h5 class="font-semibold">Contato</h5>
+                <p class="text-sm mt-2">WhatsApp: <a href="https://wa.me/SEUNUMEROCOMCODIGO"
+                        class="underline">+55 98 ....</a></p>
+            </div>
+            <div>
+                <h5 class="font-semibold">Pagamento</h5>
+                <p class="text-sm mt-2">Pagamentos via PIX / Transferência; instruções no WhatsApp após pedido.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS: carousel + reveal animations -->
+    <script>
+        // Simple reveal on scroll
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('show');
+            });
+        }, { threshold: 0.15 });
+        reveals.forEach(r => observer.observe(r));
+
+        // Basic carousel logic
+        const track = document.getElementById('carousel');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        let index = 0;
+
+        function updateCarousel() {
+            const cardWidth = track.querySelector('article').offsetWidth + 16; // gap
+            track.style.transform = `translateX(${-index * cardWidth}px)`;
+        }
+
+        next.addEventListener('click', () => {
+            const cards = track.querySelectorAll('article').length;
+            const visible = Math.floor(document.querySelector('.carousel-track').parentElement.offsetWidth / (track.querySelector('article').offsetWidth + 16));
+            if (index < cards - visible) index++;
+            updateCarousel();
+        });
+        prev.addEventListener('click', () => {
+            if (index > 0) index--;
+            updateCarousel();
+        });
+
+        // Resize handler
+        window.addEventListener('resize', () => setTimeout(updateCarousel, 120));
+        // init
+        setTimeout(updateCarousel, 300);
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', (e) => {
+                const href = a.getAttribute('href');
+                if (href.length > 1) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
