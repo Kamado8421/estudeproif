@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-BR">
 
-<head>
+<!-- <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>EstudeProIF — Materiais de Português para o IF</title>
@@ -39,15 +39,99 @@
             backdrop-filter: blur(6px);
         }
     </style>
+</head> -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- SEO Principal -->
+    <title>EstudeProIF — Materiais de Língua Portuguesa para passar no Instituto Federal (IFMA, IFPA, IFPI etc)</title>
+    <meta name="description"
+        content="Materiais de Língua Portuguesa para concursos do Instituto Federal — teoria, interpretação, gramática, exercícios comentados e plano de estudos. Ideal para IFMA, IFPA, IFPI, IFCE e outros IFs.">
+
+    <!-- Palavras-chave (Google ignora parcialmente, mas ajuda em buscadores secundários) -->
+    <meta name="keywords"
+        content="prova IF, instituto federal, IFMA, IFPA, IFPI, portugues instituto federal, estudar para IF, material IF, pdf IF, estudo IF, portugues IF, combo IF, Campus IF, Entrar Campus IF">
+
+    <!-- Google Robots -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (para WhatsApp / Facebook / Instagram) -->
+    <meta property="og:title" content="EstudeProIF — Materiais de Língua Portuguesa para o Instituto Federal - IF">
+    <meta property="og:description"
+        content="PDFs completos de Português: teoria, interpretação, leitura e plano de estudos. Preparação focada no estilo de prova dos Institutos Federais.">
+    <meta property="og:image" content="https://SEU_SITE.com/images/herosection.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://SEU_SITE.com">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .hero-gradient {
+            background-image: linear-gradient(90deg, #1e90ff 0%, #4f46e5 50%, #06b6d4 100%);
+        }
+
+        .card-gradient {
+            background-image: linear-gradient(135deg, #0ea5e910, #7c3aed50);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 600ms cubic-bezier(.2, .9, .3, 1);
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: none;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 1rem;
+            transition: transform 450ms ease;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(6px);
+        }
+    </style>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Product",
+"name": "Materiais de Língua Portuguesa para prova do Instituto Federal",
+"brand": "EstudeProIF",
+"description": "PDFs com gramática, interpretação e plano de estudos específicos para provas do Instituto Federal.",
+"image": "https://SEU_SITE.com/images/books.png",
+"offers": {
+    "@type": "Offer",
+    "price": "50.00",
+    "priceCurrency": "BRL",
+    "availability": "https://schema.org/InStock",
+    "url": "https://SEU_SITE.com"
+}
+}
+</script>
 </head>
 
-<body class="antialiased text-gray-100 bg-gradient-to-b from-sky-50 to-white">
+<body class="antialiased text-gray-100 bg-gradient-to-b from-sky-50 to-white w-screen">
 
     <!-- NAV -->
     <nav class="max-w-6xl mx-auto p-5 flex items-center justify-between">
         <a href="#" class="flex items-center gap-3">
             <div class="w-12 h-12 rounded-md hero-gradient flex items-center justify-center text-white font-bold p-1">
-                <img src="images/logo.svg" alt="Logomarca"></div>
+                <img src="images/logo.svg" alt="Logo EstudeProIF">
+            </div>
             <span class="text-sky-800 font-extrabold text-lg">EstudeProIF</span>
         </a>
         <div class="hidden md:flex gap-6 items-center text-sky-800">
@@ -56,9 +140,9 @@
             <a href="#precos" class="hover:underline">Preços</a>
             <a href="#contato" class="hover:underline">Contato</a>
         </div>
-        <a id="whatsappTop"
-            href="https://wa.me/SEUNUMEROCOMCODIGO?text=Ol%C3%A1%2C+quero+comprar+os+materiais+do+Estude+Pro+IF"
-            class="ml-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500 text-white hover:brightness-95 shadow-lg">Adiquirir Agora - WhatsApp</a>
+        <a id="whatsappTop" href="#"
+            class="ml-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500 text-white hover:brightness-95 shadow-lg">
+            Adiquirir Agora</a>
     </nav>
 
     <!-- HERO -->
@@ -95,7 +179,8 @@
             </div>
 
             <div class="relative">
-                <img src="images/herosection.svg" alt="Estudante sorrindo com mochila - imagem jovem estudante"
+                <img src="images/herosection.svg"
+                    alt="Estudante preparando-se para prova de Português do Instituto Federal com PDFs EstudeProIF"
                     class="mx-auto w-full max-w-md rounded-xl shadow-2xl border-4 border-white/10">
                 <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full"></div>
             </div>
@@ -180,8 +265,7 @@
                 <div id="carousel" class="carousel-track">
                     <!-- Card 1 -->
                     <article class="min-w-[280px] max-w-sm bg-white rounded-xl p-6 shadow">
-                        <img src="images/books.svg"
-                            alt="Capa do e-book Gramática prática - estudo de gramática para IF"
+                        <img src="images/books.svg" alt="Capa do e-book Gramática prática - estudo de gramática para IF"
                             class="rounded-md w-full">
                         <h4 class="mt-4 font-bold text-sky-800">Gramática prática</h4>
                         <p class="mt-2 text-gray-600 text-sm">Teoria objetiva e exercícios comentados.</p>
@@ -194,8 +278,8 @@
 
                     <!-- Card 2 -->
                     <article class="min-w-[280px] max-w-sm bg-white rounded-xl p-6 shadow">
-                        <img src="images/books.svg"
-                            alt="Capa do e-book Interpretação e leitura - textos comentados" class="rounded-md w-full">
+                        <img src="images/books.svg" alt="Capa do e-book Interpretação e leitura - textos comentados"
+                            class="rounded-md w-full">
                         <h4 class="mt-4 font-bold text-sky-800">Interpretação & Leitura</h4>
                         <p class="mt-2 text-gray-600 text-sm">Textos selecionados e técnicas de análise.</p>
                         <div class="mt-4 flex gap-2">
@@ -207,8 +291,7 @@
 
                     <!-- Card 3 -->
                     <article class="min-w-[280px] max-w-sm bg-white rounded-xl p-6 shadow">
-                        <img src="images/books.svg"
-                            alt="Capa do Plano de Estudos 30 dias" class="rounded-md w-full">
+                        <img src="images/books.svg" alt="Capa do Plano de Estudos 30 dias" class="rounded-md w-full">
                         <h4 class="mt-4 font-bold text-sky-800">Plano de Estudos (30 dias)</h4>
                         <p class="mt-2 text-gray-600 text-sm">Roteiro diário para organização dos estudos.</p>
                         <div class="mt-4 flex gap-2">
@@ -220,8 +303,8 @@
 
                     <!-- Card 4 - combo -->
                     <article class="min-w-[280px] max-w-sm bg-white rounded-xl p-6 shadow">
-                        <img src="images/books.svg"
-                            alt="Capa do combo completo dos e-books - pacote Estude Pro IF" class="rounded-md w-full">
+                        <img src="images/books.svg" alt="Capa do combo completo dos e-books - pacote Estude Pro IF"
+                            class="rounded-md w-full">
                         <h4 class="mt-4 font-bold text-sky-800">Combo completo</h4>
                         <p class="mt-2 text-gray-600 text-sm">Todos os materiais juntos: economia e suporte.</p>
                         <div class="mt-4 flex gap-2">
@@ -271,8 +354,7 @@
     <!-- SOBRE A PROFESSORA -->
     <section id="professora" class="max-w-6xl mx-auto px-6 py-14">
         <div class="grid md:grid-cols-3 gap-6 items-center">
-            <img src="images/teacher.png"
-                alt="Foto da professora de Língua Portuguesa - autoridade do curso"
+            <img src="images/teacher.png" alt="Foto da professora de Língua Portuguesa - autoridade do curso"
                 class="rounded-xl no-shadow-md md:col-span-1">
             <div class="md:col-span-2">
                 <h3 class="text-2xl font-bold text-sky-800">Sobre a professora</h3>
@@ -317,8 +399,8 @@
             </div>
             <div>
                 <h5 class="font-semibold">Contato</h5>
-                <p class="text-sm mt-2">WhatsApp: <a href="https://wa.me/SEUNUMEROCOMCODIGO"
-                        class="underline">+55 98 ....</a></p>
+                <p class="text-sm mt-2">WhatsApp: <a href="https://wa.me/SEUNUMEROCOMCODIGO" class="underline">+55 98
+                        ....</a></p>
             </div>
             <div>
                 <h5 class="font-semibold">Pagamento</h5>
